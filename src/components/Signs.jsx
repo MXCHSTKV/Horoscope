@@ -1,0 +1,45 @@
+import axios from 'axios';
+import { useState, useEffect } from 'react';
+import translate from "translate";
+import { useLocation } from 'react-router-dom';
+
+translate.engine = "deepl" 
+translate.key = process.env.REACT_APP_DEEPL_KEY
+
+const Signs = () => {
+    const [data, setData] = useState('Загрузка...');
+    const [ruData, setRuData] = useState('Data not loaded')
+    const location = useLocation();
+    const {sign, name} = location.state
+
+    useEffect(() => {
+        const fetchData = async (sign) => {
+            try {
+                const response = await axios.get(`https://horoscope-app-api.vercel.app/api/v1/get-horoscope/daily?sign=${sign}&day=TODAY`);
+                setData(response.data.data.horoscope_data);
+            } catch (error) {
+                console.error('Ошибка запроса', error)
+                setData('Ошибка загрузки данных')
+            }
+        };
+
+        fetchData(sign);
+    }, [sign]);
+
+    useEffect(()=>{
+        const translateData = async () => {
+            const translatedData = await translate(data, 'ru')
+            setRuData(translatedData)
+        }
+        translateData()
+    }, [data])
+
+    return (
+        <div>
+            <h1>{name}</h1>
+            <p className='sign'>{ruData ? ruData : data}</p>
+        </div>
+    );
+};
+
+export default Signs;
