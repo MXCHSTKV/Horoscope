@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Horoscope 4 U",
+  "name": "Dayli Horoscope for Telegram",
   "icons": [
     {
       "src": "favicon.ico",
