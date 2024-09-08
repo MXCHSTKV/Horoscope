@@ -3,10 +3,6 @@ import './App.css'
 import Zodiacs from './components/Zodiacs';
 
 const tg = window.Telegram.WebApp
-const onClose = () => {
-  tg.close()
-}
-
 
 function App() {
   const [lang, setLang] = useState('en')
@@ -19,9 +15,12 @@ function App() {
 
   return (
     <div className="main">
-        <button type='button' onClick={onClose}>Close</button>
-        <h1>{lang === 'ru' ? 'Здесь про Гороскопы' : 'It`s About Horoscopes'}</h1>
-        <Zodiacs/>
+      <div className="language-switcher">
+        <button type='button' onClick={()=>setLang('ru')}>RU</button>
+        <button type='button' onClick={()=>setLang('en')}>EN</button>
+      </div>
+      <h1>{lang === 'ru' ? 'Здесь про Гороскопы' : 'It`s About Horoscopes'}</h1>
+      <Zodiacs lang={lang}/>
     </div>
   );
 }

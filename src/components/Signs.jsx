@@ -10,7 +10,7 @@ const Signs = () => {
     const [data, setData] = useState('Загрузка...');
     const [ruData, setRuData] = useState('Data not loaded')
     const location = useLocation();
-    const {sign, name} = location.state
+    const {sign, name, ru} = location.state
 
     useEffect(() => {
         const fetchData = async (sign) => {
@@ -35,9 +35,9 @@ const Signs = () => {
     }, [data])
 
     return (
-        <div>
+        <div className='sign'>
             <h1>{name}</h1>
-            <p className='sign'>{ruData ? ruData : data}</p>
+            <p className='sign'>{ru ? ruData : data}</p>
         </div>
     );
 };

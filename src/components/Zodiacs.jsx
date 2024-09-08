@@ -13,80 +13,84 @@ import Pisces from '../svg/pisces-svgrepo-com.jsx';
 import Virgo from '../svg/virgo-svgrepo-com.jsx';
 import Sagittarius from '../svg/sagittarius-svgrepo-com.jsx';
 
-const Zodiacs = (props) => (
+const Zodiacs = (props) => {
+  const ru = props.lang === 'ru'
+
+  return (
     <div className="signs">
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'aries', name: 'Овен'}}>
-        <h3>Овен</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'aries', name: ru ? 'Овен' : 'Aries'}}>
+        <h3>{ru ? 'Овен' : 'Aries'}</h3>
         <Aries className="zodiac_sign"/>
-        <p>21 марта - 20&nbsp;апреля</p>
+        <p>{ru ? '21 марта - 20\u00A0апреля' : 'March 21 - April\u00A020'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'taurus', name: 'Телец'}}>
-        <h3>Телец</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'taurus', name: ru ? 'Телец' : 'Taurus'}}>
+        <h3>{ ru ? 'Телец' : 'Taurus'}</h3>
         <Taurus className="zodiac_sign"/>
-        <p>21 апреля - 20&nbsp;мая</p>
+        <p>{ru? '21 апреля - 20\u00A0мая' : 'April 21 - May\u00A020'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'gemini', name: 'Близнецы'}}>
-        <h3>Близнецы</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'gemini', name: ru ? 'Близнецы' : 'Gemini'}}>
+        <h3>{ru ? 'Близнецы' : 'Gemini'}</h3>
         <Gemini className="zodiac_sign"/>
-        <p>21 мая - 21&nbsp;июня</p>
+        <p>{ru ? '21 мая - 21\u00A0июня' : 'May 21 - June\u00A021'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'cancer', name: 'Рак'}}>
-        <h3>Рак</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'cancer', name: ru ? 'Рак' : 'Cancer'}}>
+        <h3>{ru ? 'Рак' : 'Cancer'}</h3>
         <Cancer className="zodiac_sign"/>
-        <p>22 июня - 22&nbsp;июля</p>
+        <p>{ru ? '22 июня - 22\u00A0июля' : 'June 22 - Jule\u00A022'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'leo', name: 'Лев'}}>
-        <h3>Лев</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'leo', name: ru ? 'Лев' : 'Leo'}}>
+        <h3>{ru ? 'Лев' : 'Leo'}</h3>
         <Leo className="zodiac_sign"/>
-        <p>23 июля - 23&nbsp;августа</p>
+        <p>{ru ? '23 июля - 23\u00A0августа' : 'Jule 23 - August\u00A023'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'virgo', name: 'Дева'}}>
-        <h3>Дева</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'virgo', name: ru ? 'Дева' : 'Virgo'}}>
+        <h3>{ru ? 'Дева' : 'Virgo'}</h3>
         <Virgo className="zodiac_sign"/>
-        <p>24 августа - 23&nbsp;сентября</p>
+        <p>{ru ? '24 августа - 23\u00A0сентября' : 'August 24 - September\u00A023'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'libra', name: 'Весы'}}>
-        <h3>Весы</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'libra', name: ru ? 'Весы' : 'Libra'}}>
+        <h3>{ru ? 'Весы' : 'Libra'}</h3>
         <Libra className="zodiac_sign"/>
-        <p>24 сентября - 23&nbsp;октября</p>
+        <p>{ru ? '24 сентября - 23\u00A0октября' : 'September 24 - October\u00A023'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'scorpio', name: 'Скорпион'}}>
-        <h3>Скорпион</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'scorpio', name: ru ? 'Скорпион' : 'Scorpio'}}>
+        <h3>{ru ? 'Скорпион' : 'Scorpio'}</h3>
         <Scorpio className="zodiac_sign"/>
-        <p>24 октября - 22&nbsp;ноября</p>
+        <p>{ru ? '24 октября - 22\u00A0ноября' : 'October 24 - November\u00A022'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'sagittarius', name: 'Стрелец'}}>
-        <h3>Стрелец</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'sagittarius', name: ru ? 'Стрелец' : 'Sagittarius'}}>
+        <h3>{ru ? 'Стрелец' : 'Sagittarius'}</h3>
         <Sagittarius className="zodiac_sign"/>
-        <p>23 ноября - 21&nbsp;декабря</p>
+        <p>{ru ? '23 ноября - 21\u00A0декабря' : 'November 23 - December\u00A021'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'capricorn', name: 'Козерог'}}>
-        <h3>Козерог</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'capricorn', name: ru ? 'Козерог' : 'Capricorn'}}>
+        <h3>{ru ? 'Козерог' : 'Capricorn'}</h3>
         <Capricorn className="zodiac_sign"/>
-        <p>22 декабря - 20&nbsp;января</p>
+        <p>{ru ? '22 декабря - 20\u00A0января' : 'December 22 - January\u00A020'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'aquarius', name: 'Водолей'}}>
-        <h3>Водолей</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'aquarius', name: ru ? 'Водолей' : 'Aquarius'}}>
+        <h3>{ru ? 'Водолей' : 'Aquarius'}</h3>
         <Aquarius className="zodiac_sign"/>
-        <p>21 января - 20&nbsp;февраля</p>
+        <p>{ru ? '21 января - 20\u00A0февраля' : 'January 21 - February\u00A020'}</p>
         </Link>
 
-        <Link to="/Horoscope" className="zodiac_box" state={{sign: 'pisces', name: 'Рыбы'}}>
-        <h3>Рыбы</h3>
+        <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'pisces', name: ru ? 'Рыбы' : 'Pisces'}}>
+        <h3>{ru ? 'Рыбы' : 'Pisces'}</h3>
         <Pisces className="zodiac_sign"/>
-        <p>21 февраля - 20&nbsp;марта</p>
+        <p>{ru ? '21 февраля - 20\u00A0марта' : 'February 21 - March\u00A020'}</p>
         </Link>
     </div>
   )
+}
 
 export default Zodiacs

@@ -7,28 +7,34 @@
 }
 
 .main {
-  text-align: left;
+  margin: 0;
 }
 
 .signs {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 978px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .sign {
-  margin: 0 30px 0 30px;
+  margin: 20px 20px 0 20px;
 }
 
 .zodiac_sign {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin: 10px;
-
 }
 
 .zodiac_box {
   margin: 10px;
+  margin-top: 30px;
+  width: 120px;
+  height: 170px;
 }
 
 .horoscope {
@@ -41,8 +47,18 @@ a {
 }
 
 button {
-  border: 2px solid #000;
-  padding: 3px 10px 3px 10px;
-  margin: 10px;
-  border-radius: 50% 30%;
+  background-color: #7c9fc5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.language-switcher {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 5px 30px;
 }
