@@ -44,7 +44,7 @@
 }
 
 .zodiac_box {
-  background-color: rgb(231, 227, 133);
+  background-color: rgb(255, 251, 120);
   border-radius: 10px;
   padding: 5px;
   margin: 15px 10px;
@@ -68,7 +68,7 @@ h1 {
 .sign_h3 {
   text-align: left;
   padding-top: 5px;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 button {
