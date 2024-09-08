@@ -1,7 +1,10 @@
 import Signs from '../components/Signs';
+import TgBackButton from '../components/TgBackButton';
+
 
 const Horoscope = (props) => (
     <div className="horoscope">
+        <TgBackButton/>
         <Signs name={props.name} sign={props.sign} className='sign'/>
     </div>
 )
