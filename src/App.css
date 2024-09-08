@@ -12,23 +12,23 @@
 
 .signs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
 }
 
 .sign {
-  margin: 0 40px 0 40px;
+  margin: 0 30px 0 30px;
 }
 
 .zodiac_sign {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 10px;
 
 }
 
 .zodiac_box {
-  margin: 20px;
+  margin: 10px;
 }
 
 .horoscope {
