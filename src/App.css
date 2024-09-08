@@ -1,13 +1,22 @@
+@font-face {
+  font-family: 'Lora';
+  src: url('../public/fonts/Lora-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
-  padding: 0;
-  background-color: rgb(231, 228, 228);
   text-align: center;
   list-style: 0;
+  font-family: 'Lora', sans-serif;
 }
 
 .main {
-  margin: 0;
+  background-color: rgb(235, 243, 243);
+  padding: 5px;
+  border-radius: 10px;
+  margin: 15px;
 }
 
 .signs {
@@ -18,10 +27,14 @@
   max-width: 978px;
   width: 100%;
   margin: 0 auto;
+  padding: 10px 0;
 }
 
 .sign {
-  margin: 20px 20px 0 20px;
+  background-color: rgb(164, 234, 234);
+  margin: 0px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .zodiac_sign {
@@ -31,10 +44,12 @@
 }
 
 .zodiac_box {
-  margin: 10px;
-  margin-top: 30px;
+  background-color: rgb(231, 227, 133);
+  border-radius: 10px;
+  padding: 5px;
+  margin: 15px 10px;
   width: 120px;
-  height: 170px;
+  height: 190px;
 }
 
 .horoscope {
@@ -44,6 +59,16 @@
 a {
   text-decoration: none;
   color: inherit;
+}
+
+h1 {
+  padding-top: 10px;
+}
+
+.sign_h3 {
+  text-align: left;
+  padding-top: 5px;
+  padding-left: 40px;
 }
 
 button {

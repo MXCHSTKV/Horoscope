@@ -19,9 +19,9 @@ const Zodiacs = (props) => {
   return (
     <div className="signs">
         <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'aries', name: ru ? 'Овен' : 'Aries'}}>
-        <h3>{ru ? 'Овен' : 'Aries'}</h3>
+        <h3 className='zodiac_box_text'>{ru ? 'Овен' : 'Aries'}</h3>
         <Aries className="zodiac_sign"/>
-        <p>{ru ? '21 марта - 20\u00A0апреля' : 'March 21 - April\u00A020'}</p>
+        <p className='zodiac_box_text'>{ru ? '21 марта - 20\u00A0апреля' : 'March 21 - April\u00A020'}</p>
         </Link>
 
         <Link to="/Horoscope" className="zodiac_box" state={{ru: ru, sign: 'taurus', name: ru ? 'Телец' : 'Taurus'}}>

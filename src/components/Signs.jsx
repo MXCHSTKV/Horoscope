@@ -37,6 +37,7 @@ const Signs = () => {
     return (
         <div className='sign'>
             <h1>{name}</h1>
+            <h3 className='sign_h3'>{ru ? 'Твой гороскоп на сегодня:' : 'Your horoscope for today:'}</h3>
             <p className='sign'>{ru ? ruData : data}</p>
         </div>
     );
