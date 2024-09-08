@@ -5,12 +5,13 @@ const tg = window.Telegram.WebApp
 const onClose = () => {
   tg.close()
 }
+const lang = tg.WebAppUser.language_code()
 
 function App() {
   return (
     <div className="main">
         <button type='button' onClick={onClose}>Close</button>
-        <h1>Здесь про Гороскопы</h1>
+        <h1>{lang == 'ru' ? 'Здесь про Гороскопы' : 'It`s About Horoscopes'}</h1>
         <Zodiacs/>
     </div>
   );
