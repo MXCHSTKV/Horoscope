@@ -5,15 +5,15 @@ import Zodiacs from './components/Zodiacs';
 const tg = window.Telegram.WebApp
 
 function App() {
-  const [lang, setLang] = useState(localStorage.getItem('selectedLanguage') || 'ru')
+  const [lang, setLang] = useState(sessionStorage.getItem('selectedLanguage') || 'ru')
   const changeLanguage = (newLang) => {
-    localStorage.setItem('selectedLanguage', newLang)
+    sessionStorage.setItem('selectedLanguage', newLang)
     setLang(newLang)
   }
 
   useEffect(() => {
     const userLang = tg.initDataUnsafe?.user?.language_code || 'ru';
-    setLang(localStorage.getItem('selectedLanguage') || userLang);
+    setLang(sessionStorage.getItem('selectedLanguage') || userLang);
 
     tg.ready()
   }, [])
