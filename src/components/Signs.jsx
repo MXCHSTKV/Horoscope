@@ -10,12 +10,12 @@ const Signs = () => {
     const [data, setData] = useState('Загрузка...');
     const [ruData, setRuData] = useState('Data not loaded')
     const location = useLocation();
-    const {sign, name, ru} = location.state
+    const {sign, name, ru, date} = location.state
 
     useEffect(() => {
-        const fetchData = async (sign) => {
+        const fetchData = async (sign, date) => {
             try {
-                const response = await axios.get(`https://pure-server.onrender.com/horoscope?sign=${sign}`);
+                const response = await axios.get(`https://pure-server.onrender.com/horoscope?sign=${sign}&date=${date}`);
                 setData(response.data);
             } catch (error) {
                 console.error('Ошибка запроса', error)
@@ -23,7 +23,7 @@ const Signs = () => {
             }
         };
 
-        fetchData(sign);
+        fetchData(sign, date);
     }, [sign]);
 
     useEffect(()=>{
