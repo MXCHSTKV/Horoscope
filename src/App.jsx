@@ -7,7 +7,7 @@ const tg = window.Telegram.WebApp
 function App() {
   const [lang, setLang] = useState('en')
   useEffect(() => {
-    const userLang = tg.initDataUnsafe?.user?.language_code || 'en';
+    const userLang = tg.initDataUnsafe?.user?.language_code || 'ru';
     setLang(userLang);
 
     tg.ready();
@@ -19,7 +19,7 @@ function App() {
         <button type='button' onClick={()=>setLang('ru')}>RU</button>
         <button type='button' onClick={()=>setLang('en')}>EN</button>
       </div>
-      <h1>{lang === 'ru' ? 'Здесь про Гороскопы' : 'It`s About Horoscopes'}</h1>
+      <h1>{lang === 'ru' ? 'Выбери свой знак' : 'Choose your sign'}</h1>
       <Zodiacs lang={lang}/>
     </div>
   );
